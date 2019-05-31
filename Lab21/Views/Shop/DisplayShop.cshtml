@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "DisplayShop";
+}
+
+<h2>Shop Menu</h2>
+@model  Lab21.Models.Item
+
+
+<div class="table">
+    @*<tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>*@
+
+    @foreach (var item in ViewBag.ShopList)
+    {
+        
+            @item.Id
+            @item.Name
+            @item.Description
+            @item.Quantity
+            <p>@item.Price</p> 
+            <a href="..\Shop\UpdateItem?Id=@Model.Id" class="btn-primary">Update</a>
+            <a href="..\Shop\DeleteItem?Id=@Model.Id" class="btn-danger">Delete</a>
+
+        
+
+    }
+</div>

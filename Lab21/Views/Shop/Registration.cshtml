@@ -1,0 +1,38 @@
+﻿
+@*@{
+    ViewBag.Title = "Registration";
+}*@
+
+<h2>Registration</h2>
+@model  Lab21.Models.User
+
+<form action="../Shop/SaveNewUser" method="post">
+
+    <div class="inputLook">
+
+        
+        First Name: <input type="text" name="FirstName" value="@Model.FirstName" /><br />
+        Last Name: <input type="text" name="LastName" value="@Model.LastName" /><br />
+        Username: <input type="text" name="Username" value="@Model.Username" /><br />
+        Email: <input type="email" name="Email" value="@Model.Email" /><br />
+        Password: <input type="password" name="Password" value="@Model.Password" /><br />
+
+
+        <input type="submit" value="Submit Info" />
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
